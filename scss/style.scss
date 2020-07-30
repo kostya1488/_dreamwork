@@ -1,0 +1,465 @@
+// ---------------------------------------------------------- mixins
+@mixin figure_bubble ($diameter, $bg_color) {
+    position: absolute;
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+    background-color: $bg_color;
+}
+
+// ========================================================== / mixins
+// ---------------------------------------------------------- variables
+$screen_xs_max: 575px;
+$screen_sm_max: 767px;
+$screen_md_max: 991px;
+$screen_lg_max: 1199px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
+$brand_main_color: #F15B7D;
+// ========================================================== / variables
+// ---------------------------------------------------------- commons
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 29px;
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .btn_main {
+        display: inline-block;
+        background: $brand_main_color;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+        padding: 9px 26px;
+    }
+    .btn_secondary {
+        display: inline-block;
+        border: 2px solid $brand_main_color;
+        border-radius: 5px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+        padding: 7px 26px;
+        color: $brand_main_color;
+        transition: .3s;
+        &:hover {
+            background: $brand_main_color;
+        }
+    }
+}
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    overflow-x: hidden;
+}
+
+.section_title {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 47px;
+}
+
+.section_subtitle {
+    font-size: 27px;
+    line-height: 33px;
+}
+
+.btn_main {
+    display: inline-block;
+    background: $brand_main_color;
+    border-radius: 5px;
+    // max-width: 224px;
+    // height: 40px;
+    font-weight: 500;
+    padding: 9px 26px;
+}
+
+.btn_secondary {
+    display: inline-block;
+    border: 2px solid $brand_main_color;
+    border-radius: 5px;
+    // height: 40px;
+    font-weight: 500;
+    padding: 7px 26px;
+    color: $brand_main_color;
+    transition: .3s;
+    &:hover {
+        background: $brand_main_color;
+    }
+}
+
+// ========================================================== / commons
+// ---------------------------------------------------------- section_intro
+.section_intro {
+    padding-top: 33px;
+    background: url(../assets/intro.jpg) no-repeat 0 0;
+    background-size: cover;
+    height: 100vh;
+}
+
+header {
+    .logo {
+        font-weight: bold;
+        font-size: 28.3636px;
+        line-height: 29px;
+        color: #fff;
+    }
+    .menu_list {
+        li+li {
+            margin-left: 44px;
+        }
+        .menu_item {
+            font-size: 21px;
+            line-height: 26px;
+        }
+    }
+    .phone_number {
+        padding: 0;
+        text-align: end;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 26px;
+        img {
+            margin-right: 10px;
+        }
+    }
+}
+
+.preview_box {
+    margin-top: 18vh;
+    .preview_subtitle {
+        font-weight: 500;
+        font-size: 31.1479px;
+        line-height: 103.4%;
+        /* or 32px */
+        text-align: center;
+        color: #fff;
+        letter-spacing: 0.1em;
+        margin-bottom: 7px;
+    }
+    .preview_title {
+        font-weight: bold;
+        font-size: 60px;
+        line-height: 103.4%;
+        /* or 62px */
+        text-align: center;
+        color: #FFFFFF;
+        margin-bottom: 16px;
+    }
+    .preview_buttons {
+        text-align: center;
+        a+a {
+            margin-left: 13px;
+        }
+        a {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+
+// ========================================================== / section_intro
+// ---------------------------------------------------------- section_contacts
+.section_contacts {
+    padding: 75px 0;
+    background-color: $brand_main_color;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    position: relative;
+    .section_subtitle {
+        font-weight: 600;
+        color: #fff;
+    }
+    .messengers_box {
+        text-align: end;
+        img+img {
+            margin-left: 10px;
+        }
+        img {
+            width: 34px;
+        }
+    }
+    .figure_bouble-1 {
+        @include figure_bubble(64px, rgba(255, 255, 255, 0.13));
+        left: 64px;
+        top: 40px;
+    }
+    .figure_bouble-2 {
+        @include figure_bubble(32px, rgba(255, 255, 255, 0.13));
+        left: 144px;
+        top: 95px;
+    }
+    .figure_bouble-3 {
+        @include figure_bubble(32px, rgba(255, 255, 255, 0.13));
+        right: 224px;
+        top: 105px;
+    }
+    .figure_bouble-4 {
+        @include figure_bubble(57px, rgba(255, 255, 255, 0.13));
+        right: -20px;
+        top: 23px;
+    }
+}
+
+// ========================================================== / section_contacts
+// ---------------------------------------------------------- section_promo
+.section_promo {
+    background: url(../assets/promo.jpg) no-repeat 50% 100%;
+    background-size: cover;
+    padding: 13vh 0;
+    min-height: 100vh;
+    .section_title {
+        color: #fff;
+        margin-top: 9vh;
+        span {
+            color: $brand_main_color;
+        }
+    }
+    .promo_text {
+        font-weight: 500;
+        line-height: 27px;
+        color: rgba(51, 51, 51, 0.9);
+        margin-top: 28vh;
+    }
+}
+
+// ========================================================== / section_promo
+// ---------------------------------------------------------- section_advantages
+.section_advantages {
+    padding-bottom: 13px;
+    position: relative;
+    .section_title {
+        text-align: center;
+        color: $brand_main_color;
+        margin-bottom: 100px;
+    }
+    .advantages_item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        margin-bottom: 87px;
+        &__icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.21);
+            margin-bottom: 47px;
+        }
+        &__title {
+            margin-bottom: 16px;
+        }
+        &__description {
+            text-align: center;
+        }
+    }
+    .figure_bouble-1 {
+        @include figure_bubble(176px, rgba(251, 130, 165, 0.18));
+        left: -67px;
+        top: 78px;
+    }
+    .figure_bouble-2 {
+        @include figure_bubble(176px, rgba(251, 130, 165, 0.18));
+        right: -69px;
+        top: 382px;
+    }
+    .figure_bouble-3 {
+        @include figure_bubble(105px, rgba(251, 130, 165, 0.18));
+        left: -67px;
+        bottom: 265px;
+    }
+}
+
+// ========================================================== / section_advantages
+// ---------------------------------------------------------- section_about
+.section_about {
+    background: #F79BBC;
+    position: relative;
+    .text_box {
+        .section_title {
+            color: #fff;
+            margin-bottom: 12px;
+        }
+        &__description {
+            color: #5C031C;
+            margin-bottom: 28px;
+        }
+        &__batton {}
+    }
+    .about_img_1 {
+        position: absolute;
+        width: 583px;
+        left: -62px;
+        bottom: 0;
+    }
+    .about_img_2 {
+        position: absolute;
+        width: 424px;
+        right: 0;
+        bottom: 0;
+    }
+    .figure_bouble-1 {
+        @include figure_bubble(64px, rgba(255, 255, 255, 0.13));
+        top: 51px;
+        left: 71px;
+    }
+    .figure_bouble-2 {
+        @include figure_bubble(134px, rgba(255, 255, 255, 0.13));
+        top: 127px;
+        left: 472px;
+    }
+    .figure_bouble-3 {
+        @include figure_bubble(32px, rgba(255, 255, 255, 0.13));
+        top: 95px;
+        right: 183px;
+    }
+    .figure_bouble-4 {
+        @include figure_bubble(64px, rgba(255, 255, 255, 0.13));
+        top: 34px;
+        right: 95px;
+    }
+}
+
+// ========================================================== / section_about    
+// ---------------------------------------------------------- section_vacancies
+.section_vacancies {
+    .section_title {
+        color: $brand_main_color;
+    }
+    .text_color {
+        display: inline-block;
+        padding: 0 15px;
+        background-color: $brand_main_color;
+        color: #fff;
+    }
+    .vacancies_item {
+        overflow: hidden;
+        margin-top: 70px;
+        transition: .3s;
+        &__title {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        &__description {
+            line-height: 22px;
+        }
+        .vacancies_item__photo {
+            height: 336px;
+            margin-bottom: 20px;
+            padding: 23px 28px;
+            transition: .3s;
+            position: relative;
+            .btn_main {
+                text-align: center;
+                opacity: 0;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                -webkit-backdrop-filter: grayscale(30%);
+                backdrop-filter: grayscale(100%);
+            }
+            &[vacancy="model"] {
+                background: url(../assets/vacancy_model.jpg) no-repeat 50% 0;
+                background-size: cover;
+            }
+            &[vacancy="admin"] {
+                background: url(../assets/vacancy_admin.jpg) no-repeat 50% 0;
+                background-size: cover;
+            }
+            &[vacancy="mass"] {
+                background: url(../assets/vacancy_mass.jpg) no-repeat 43% 0;
+                background-size: cover;
+            }
+        }
+        &:hover {
+            color: #5C031C;
+            .vacancies_item__photo {
+                border: 5px solid #F15B7D;
+                &::after {
+                    -webkit-backdrop-filter: grayscale(0%);
+                    backdrop-filter: grayscale(0%);
+                }
+            }
+            .btn_main {
+                text-align: center;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// ========================================================== / section_vacancie
+// ---------------------------------------------------------- section_anketa
+.section_anketa {
+    background: url(../assets/anketa.jpg) no-repeat 50% 0;
+    background-size: cover;
+    min-height: 100vh;
+    .section_title {
+        color: $brand_main_color;
+        margin-bottom: 4px;
+    }
+    .anketa_subtitle {
+        font-size: 18px;
+        line-height: 22px;
+        color: rgba(92, 3, 28, 0.9);
+        margin-bottom: 20px;
+    }
+    .form_box {
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.47);
+        border-radius: 10px;
+        padding: 46px 28px 30px;
+        margin-bottom: 24px;
+    }
+    .form_text {
+        padding-left: 8px;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(92, 3, 28, 0.9);
+        margin-bottom: 1px;
+    }
+    .input {
+        margin-bottom: 16px;
+    }
+    .input,
+    .textarea {
+        background: rgba(255, 255, 255, 0.9);
+        color: rgba(92, 3, 28, 0.9);
+        border-radius: 10px;
+        border: none;
+        padding: 9px 12px;
+        resize: none;
+        outline: none;
+    }
+}
+
+// ========================================================== / section_anketa    
+// ---------------------------------------------------------- section_footer
+.section_footer {}
+
+// ========================================================== / section_footer
