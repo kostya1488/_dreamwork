@@ -48,6 +48,8 @@ $brand_main_color: #F15B7D;
         line-height: 22px;
         font-weight: 500;
         padding: 9px 26px;
+        outline: none;
+        z-index: 100;
     }
     .btn_secondary {
         display: inline-block;
@@ -60,7 +62,7 @@ $brand_main_color: #F15B7D;
         color: $brand_main_color;
         transition: .3s;
         &:hover {
-            background: $brand_main_color;
+            color: $brand_main_color;
         }
     }
 }
@@ -82,30 +84,6 @@ section {
     line-height: 33px;
 }
 
-.btn_main {
-    display: inline-block;
-    background: $brand_main_color;
-    border-radius: 5px;
-    // max-width: 224px;
-    // height: 40px;
-    font-weight: 500;
-    padding: 9px 26px;
-}
-
-.btn_secondary {
-    display: inline-block;
-    border: 2px solid $brand_main_color;
-    border-radius: 5px;
-    // height: 40px;
-    font-weight: 500;
-    padding: 7px 26px;
-    color: $brand_main_color;
-    transition: .3s;
-    &:hover {
-        background: $brand_main_color;
-    }
-}
-
 .logo {
     font-weight: bold;
     font-size: 28.3636px;
@@ -123,13 +101,59 @@ section {
     }
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+    &-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+    &-thumb {
+        height: 30vh;
+        border-radius: 10px;
+        background-color: darken($brand_main_color, 20%);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+}
+
+@media (max-width: $screen_md_max) {
+    .logo {
+        font-size: 20.5348px;
+        line-height: 103.4%;
+    }
+}
+
 // ========================================================== / commons
 // ---------------------------------------------------------- section_intro
 .section_intro {
     padding-top: 33px;
+    height: 100vh;
+    padding: 50px 112px;
+    .vacancy_title {
+        font-weight: bold;
+        font-size: 90.8876px;
+        line-height: 117.4%;
+        /* identical to box height, or 107px */
+        color: #FFFFFF;
+    }
+}
+
+.index_page {
     background: url(../assets/intro.jpg) no-repeat 0 0;
     background-size: cover;
-    height: 100vh;
+}
+
+.model_page {
+    background: url(../assets/vacancy_model.jpg) no-repeat 0 20%;
+    background-size: cover;
+}
+
+.admin_page {
+    background: url(../assets/vacancy_admin.jpg) no-repeat 0 20%;
+    background-size: cover;
+}
+
+.mass_page {
+    background: url(../assets/vacancy_mass.jpg) no-repeat 0 20%;
+    background-size: cover;
 }
 
 header {
@@ -140,6 +164,12 @@ header {
         .menu_item {
             font-size: 21px;
             line-height: 26px;
+            transition: .3s;
+            &:hover {
+                .item_link {
+                    color: $brand_main_color;
+                }
+            }
         }
     }
     .phone_number {
@@ -160,7 +190,6 @@ header {
         font-weight: 500;
         font-size: 31.1479px;
         line-height: 103.4%;
-        /* or 32px */
         text-align: center;
         color: #fff;
         letter-spacing: 0.1em;
@@ -170,7 +199,6 @@ header {
         font-weight: bold;
         font-size: 60px;
         line-height: 103.4%;
-        /* or 62px */
         text-align: center;
         color: #FFFFFF;
         margin-bottom: 16px;
@@ -183,6 +211,49 @@ header {
         a {
             font-size: 18px;
             line-height: 22px;
+        }
+    }
+}
+
+@media (max-width: $screen_lg_max) {
+    .section_intro {
+        height: 79vh;
+    }
+}
+
+@media (max-width: $screen_md_max) {
+    .section_intro {
+        background: url(../assets/intro.jpg) no-repeat 38% 0;
+        background-size: cover;
+        padding: 46px 0px 25px;
+        position: relative;
+        height: 79vh;
+        nav {
+            padding: 0;
+        }
+        header {
+            .menu_list .menu_item {
+                font-size: 16px;
+                line-height: 20px;
+            }
+            .phone_number {
+                position: absolute;
+                bottom: 25px;
+                right: 25px;
+                font-size: 16px;
+                line-height: 20px;
+                img {
+                    margin-right: 6px;
+                }
+            }
+            .logo {
+                padding: 0;
+                font-size: 20.5348px;
+                line-height: 103.4%;
+            }
+        }
+        .preview_box {
+            margin-top: 46vh;
         }
     }
 }
@@ -218,6 +289,18 @@ header {
         right: -20px;
         top: 23px;
     }
+    @media (max-width: $screen_lg_max) {
+        .section_contacts {
+            min-height: 21vh;
+        }
+    }
+    @media (max-width: $screen_md_max) {
+        min-height: 21vh;
+        .section_subtitle,
+        .messengers_box {
+            padding: 0;
+        }
+    }
 }
 
 // ========================================================== / section_contacts
@@ -239,6 +322,11 @@ header {
         line-height: 27px;
         color: rgba(51, 51, 51, 0.9);
         margin-top: 28vh;
+    }
+    @media (max-width: $screen_lg_max) {
+        background: url(../assets/promo.jpg) no-repeat 46% 100%;
+        background-size: cover;
+        min-height: 680px;
     }
 }
 
@@ -306,7 +394,7 @@ header {
             color: #5C031C;
             margin-bottom: 28px;
         }
-        &__batton {}
+        // &__batton {}
     }
     .about_img_1 {
         position: absolute;
@@ -415,12 +503,45 @@ header {
     }
 }
 
-// ========================================================== / section_vacancie
+// ========================================================== / section_vacancies
+// ---------------------------------------------------------- section_vacancy
+.section_vacancy {
+    .list_box+.list_box {
+        margin-top: 50px;
+    }
+    .list_box__title {
+        font-weight: 600;
+        color: rgba(51, 51, 51, 0.9);
+        margin-bottom: 20px;
+    }
+    .list_box__list {
+        font-weight: 500;
+        color: rgba(51, 51, 51, 0.9);
+        li {
+            background: url(../assets/svg/check_marker.svg) no-repeat 0 40%;
+            padding-left: 30px;
+        }
+    }
+    .text_box {
+        &__title {
+            color: $brand_main_color;
+            margin-bottom: 36px;
+        }
+        &__description {
+            margin-bottom: 36px;
+        }
+        // &__button {}
+    }
+}
+
+// ========================================================== / section_vacancy
 // ---------------------------------------------------------- section_anketa
 .section_anketa {
     background: url(../assets/anketa.jpg) no-repeat 50% 0;
     background-size: cover;
-    // min-height: 100vh;
+    height: 878px;
+    position: relative;
+    overflow: hidden;
     .section_title {
         color: $brand_main_color;
         margin-bottom: 4px;
@@ -432,7 +553,7 @@ header {
         margin-bottom: 20px;
     }
     .form_box {
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(236, 236, 236, 0.94);
         box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.47);
         border-radius: 10px;
         padding: 46px 28px 30px;
@@ -457,6 +578,34 @@ header {
         padding: 9px 12px;
         resize: none;
         outline: none;
+    }
+    .response {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: $brand_main_color;
+        position: absolute;
+        max-width: 488px;
+        margin-left: -244px;
+        left: 50%;
+        top: -400px;
+        opacity: 0.5;
+        border-radius: 10px;
+        padding: 125px 90px;
+        box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.47);
+        img {
+            filter: drop-shadow(2px 10px 30px rgba(0, 0, 0, 0.33));
+            margin-bottom: 24px;
+        }
+        #response_text {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 158.4%;
+            color: #FFFFFF;
+        }
+    }
+    .show {
+        display: flex;
     }
 }
 
