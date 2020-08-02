@@ -37,6 +37,12 @@
     transition: .3s; }
     .body .btn_secondary:hover {
       color: #F15B7D; }
+  .body .slick-dots li.slick-active button:before {
+    opacity: .75;
+    font-size: 16px;
+    color: #F15B7D; }
+  .body .slick-dots li button:before {
+    font-size: 16px; }
 
 section {
   padding-top: 100px;
@@ -72,7 +78,7 @@ section {
   ::-webkit-scrollbar-thumb {
     height: 30vh;
     border-radius: 10px;
-    background-color: #d4123e;
+    background-color: #ed2c58;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
 
 @media (max-width: 991px) {
@@ -87,8 +93,8 @@ section {
   .section_intro .vacancy_title {
     font-weight: bold;
     font-size: 90.8876px;
-    line-height: 117.4%;
     /* identical to box height, or 107px */
+    line-height: 117.4%;
     color: #FFFFFF; }
 
 .index_page {
@@ -151,17 +157,16 @@ header .phone_number {
       font-size: 18px;
       line-height: 22px; }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section_intro {
+    height: 85vh; } }
+
 @media (max-width: 1199px) {
   .section_intro {
-    height: 79vh; } }
-
-@media (max-width: 991px) {
-  .section_intro {
-    background: url(../assets/intro.jpg) no-repeat 38% 0;
+    background-position: 38% 0;
     background-size: cover;
     padding: 46px 0px 25px;
-    position: relative;
-    height: 79vh; }
+    position: relative; }
     .section_intro nav {
       padding: 0; }
     .section_intro header .menu_list .menu_item {
@@ -180,7 +185,14 @@ header .phone_number {
       font-size: 20.5348px;
       line-height: 103.4%; }
     .section_intro .preview_box {
-      margin-top: 46vh; } }
+      position: absolute;
+      bottom: 96px; }
+    .section_intro .vacancy_title {
+      font-size: 60px; } }
+
+@media (max-width: 991px) {
+  .section_intro {
+    height: 79vh; } }
 
 .section_contacts {
   padding: 75px 0;
@@ -222,35 +234,43 @@ header .phone_number {
     background-color: rgba(255, 255, 255, 0.13);
     right: -20px;
     top: 23px; }
-  @media (max-width: 1199px) {
-    .section_contacts .section_contacts {
-      min-height: 21vh; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .section_contacts {
+      min-height: 15vh; } }
   @media (max-width: 991px) {
     .section_contacts {
-      min-height: 21vh; }
-      .section_contacts .section_subtitle,
-      .section_contacts .messengers_box {
-        padding: 0; } }
+      min-height: 21vh; } }
 
 .section_promo {
   background: url(../assets/promo.jpg) no-repeat 50% 100%;
-  background-size: cover;
-  padding: 13vh 0;
-  min-height: 100vh; }
+  background-size: cover; }
   .section_promo .section_title {
-    color: #fff;
-    margin-top: 9vh; }
+    color: #fff; }
     .section_promo .section_title span {
       color: #F15B7D; }
   .section_promo .promo_text {
     font-weight: 500;
     line-height: 27px;
-    color: rgba(51, 51, 51, 0.9);
-    margin-top: 28vh; }
+    color: rgba(51, 51, 51, 0.9); }
+  @media (min-width: 1200px) {
+    .section_promo {
+      min-height: 100vh; }
+      .section_promo .section_title {
+        margin-top: 9vh; }
+      .section_promo .promo_text {
+        margin-top: 28vh; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .section_promo {
+      padding: 150px 0;
+      min-height: 768px; } }
   @media (max-width: 1199px) {
     .section_promo {
       background: url(../assets/promo.jpg) no-repeat 46% 100%;
-      background-size: cover;
+      background-size: cover; }
+      .section_promo .promo_text {
+        margin-top: 28px; } }
+  @media (max-width: 991px) {
+    .section_promo {
       min-height: 680px; } }
 
 .section_advantages {
@@ -303,6 +323,18 @@ header .phone_number {
     background-color: rgba(251, 130, 165, 0.18);
     left: -67px;
     bottom: 265px; }
+  @media (max-width: 991px) {
+    .section_advantages {
+      padding-bottom: 100px; }
+      .section_advantages .advantages_item {
+        margin-top: 20px;
+        width: 370px;
+        margin-bottom: 40px; }
+      .section_advantages .figure_bouble-2 {
+        top: -55px; }
+      .section_advantages .figure_bouble-3 {
+        left: 73px;
+        bottom: 33px; } }
 
 .section_about {
   background: #F79BBC;
@@ -355,6 +387,9 @@ header .phone_number {
     background-color: rgba(255, 255, 255, 0.13);
     top: 34px;
     right: 95px; }
+  @media (max-width: 1199px) {
+    .section_about .about_img_2 {
+      width: 387px; } }
 
 .section_vacancies .section_title {
   color: #F15B7D; }
@@ -366,6 +401,7 @@ header .phone_number {
   color: #fff; }
 
 .section_vacancies .vacancies_item {
+  display: block;
   overflow: hidden;
   margin-top: 70px;
   transition: .3s; }
@@ -412,8 +448,10 @@ header .phone_number {
       text-align: center;
       opacity: 1; }
 
-.section_vacancy .list_box + .list_box {
-  margin-top: 50px; }
+@media (max-width: 991px) {
+  .section_vacancies .vacancies_item {
+    width: 340px;
+    margin: 50px 62px; } }
 
 .section_vacancy .list_box__title {
   font-weight: 600;
@@ -433,6 +471,16 @@ header .phone_number {
 
 .section_vacancy .text_box__description {
   margin-bottom: 36px; }
+
+@media (min-width: 992px) {
+  .section_vacancy .list_box + .list_box {
+    margin-top: 50px; }
+  .section_vacancy .list_box {
+    flex: 0; } }
+
+@media (max-width: 991px) {
+  .section_vacancy .list_box {
+    margin-bottom: 50px; } }
 
 .section_anketa {
   background: url(../assets/anketa.jpg) no-repeat 50% 0;
@@ -503,5 +551,13 @@ header .phone_number {
     background-color: rgba(255, 255, 255, 0.55);
     margin-top: 32px;
     margin-bottom: 38px; }
-  .section_footer .menu_list li + li {
-    margin-left: 100px; }
+  @media (min-width: 992px) {
+    .section_footer .menu_list li + li {
+      margin-left: 100px; } }
+  @media (min-width: 576px) and (max-width: 1199px) {
+    .section_footer {
+      position: relative; }
+      .section_footer .messengers_box {
+        position: absolute;
+        top: 50px;
+        right: 33px; } }

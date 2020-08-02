@@ -65,6 +65,16 @@ $brand_main_color: #F15B7D;
             color: $brand_main_color;
         }
     }
+    .slick-dots {
+        li.slick-active button:before {
+            opacity: .75;
+            font-size: 16px;
+            color: $brand_main_color;
+        }
+        li button:before {
+            font-size: 16px;
+        }
+    }
 }
 
 section {
@@ -109,7 +119,7 @@ section {
     &-thumb {
         height: 30vh;
         border-radius: 10px;
-        background-color: darken($brand_main_color, 20%);
+        background-color: darken($brand_main_color, 10%);
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     }
 }
@@ -130,8 +140,8 @@ section {
     .vacancy_title {
         font-weight: bold;
         font-size: 90.8876px;
-        line-height: 117.4%;
         /* identical to box height, or 107px */
+        line-height: 117.4%;
         color: #FFFFFF;
     }
 }
@@ -215,19 +225,18 @@ header {
     }
 }
 
-@media (max-width: $screen_lg_max) {
+@media (min-width: $screen_lg) and (max-width: $screen_lg_max) {
     .section_intro {
-        height: 79vh;
+        height: 85vh;
     }
 }
 
-@media (max-width: $screen_md_max) {
+@media (max-width: $screen_lg_max) {
     .section_intro {
-        background: url(../assets/intro.jpg) no-repeat 38% 0;
+        background-position: 38% 0;
         background-size: cover;
         padding: 46px 0px 25px;
         position: relative;
-        height: 79vh;
         nav {
             padding: 0;
         }
@@ -253,8 +262,18 @@ header {
             }
         }
         .preview_box {
-            margin-top: 46vh;
+            position: absolute;
+            bottom: 96px;
         }
+        .vacancy_title {
+            font-size: 60px;
+        }
+    }
+}
+
+@media (max-width: $screen_md_max) {
+    .section_intro {
+        height: 79vh;
     }
 }
 
@@ -289,17 +308,11 @@ header {
         right: -20px;
         top: 23px;
     }
-    @media (max-width: $screen_lg_max) {
-        .section_contacts {
-            min-height: 21vh;
-        }
+    @media (min-width: $screen_lg) and (max-width: $screen_lg_max) {
+        min-height: 15vh;
     }
     @media (max-width: $screen_md_max) {
         min-height: 21vh;
-        .section_subtitle,
-        .messengers_box {
-            padding: 0;
-        }
     }
 }
 
@@ -308,11 +321,9 @@ header {
 .section_promo {
     background: url(../assets/promo.jpg) no-repeat 50% 100%;
     background-size: cover;
-    padding: 13vh 0;
-    min-height: 100vh;
+    // padding: 13vh 0;
     .section_title {
         color: #fff;
-        margin-top: 9vh;
         span {
             color: $brand_main_color;
         }
@@ -321,11 +332,28 @@ header {
         font-weight: 500;
         line-height: 27px;
         color: rgba(51, 51, 51, 0.9);
-        margin-top: 28vh;
+    }
+    @media (min-width: $screen_xl) {
+        min-height: 100vh;
+        .section_title {
+            margin-top: 9vh;
+        }
+        .promo_text {
+            margin-top: 28vh;
+        }
+    }
+    @media (min-width: $screen_lg) and (max-width: $screen_lg_max) {
+        padding: 150px 0;
+        min-height: 768px;
     }
     @media (max-width: $screen_lg_max) {
         background: url(../assets/promo.jpg) no-repeat 46% 100%;
         background-size: cover;
+        .promo_text {
+            margin-top: 28px;
+        }
+    }
+    @media (max-width: $screen_md_max) {
         min-height: 680px;
     }
 }
@@ -378,6 +406,21 @@ header {
         left: -67px;
         bottom: 265px;
     }
+    @media (max-width: $screen_md_max) {
+        padding-bottom: 100px;
+        .advantages_item {
+            margin-top: 20px;
+            width: 370px;
+            margin-bottom: 40px;
+        }
+        .figure_bouble-2 {
+            top: -55px;
+        }
+        .figure_bouble-3 {
+            left: 73px;
+            bottom: 33px;
+        }
+    }
 }
 
 // ========================================================== / section_advantages
@@ -394,7 +437,6 @@ header {
             color: #5C031C;
             margin-bottom: 28px;
         }
-        // &__batton {}
     }
     .about_img_1 {
         position: absolute;
@@ -428,6 +470,11 @@ header {
         top: 34px;
         right: 95px;
     }
+    @media (max-width: $screen_lg_max) {
+        .about_img_2 {
+            width: 387px;
+        }
+    }
 }
 
 // ========================================================== / section_about    
@@ -443,6 +490,7 @@ header {
         color: #fff;
     }
     .vacancies_item {
+        display: block;
         overflow: hidden;
         margin-top: 70px;
         transition: .3s;
@@ -501,14 +549,17 @@ header {
             }
         }
     }
+    @media (max-width: $screen_md_max) {
+        .vacancies_item {
+            width: 340px;
+            margin: 50px 62px;
+        }
+    }
 }
 
 // ========================================================== / section_vacancies
 // ---------------------------------------------------------- section_vacancy
 .section_vacancy {
-    .list_box+.list_box {
-        margin-top: 50px;
-    }
     .list_box__title {
         font-weight: 600;
         color: rgba(51, 51, 51, 0.9);
@@ -531,6 +582,19 @@ header {
             margin-bottom: 36px;
         }
         // &__button {}
+    }
+    @media (min-width: $screen_lg) {
+        .list_box+.list_box {
+            margin-top: 50px;
+        }
+        .list_box {
+            flex: 0;
+        }
+    }
+    @media (max-width: $screen_md_max) {
+        .list_box {
+            margin-bottom: 50px;
+        }
     }
 }
 
@@ -619,9 +683,19 @@ header {
         margin-top: 32px;
         margin-bottom: 38px;
     }
-    .menu_list {
-        li+li {
-            margin-left: 100px;
+    @media (min-width: $screen_lg) {
+        .menu_list {
+            li+li {
+                margin-left: 100px;
+            }
+        }
+    }
+    @media (min-width: $screen_sm) and (max-width: $screen_lg_max) {
+        position: relative;
+        .messengers_box {
+            position: absolute;
+            top: 50px;
+            right: 33px;
         }
     }
 }
