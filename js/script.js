@@ -1,15 +1,8 @@
 $(document).ready(function() {
-
-    //--------------------------------------------------------------------- smooth scrolling
-    $(".item_link").on("click", function(event) {
-        event.preventDefault();
-        var id = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({ scrollTop: top }, 500);
-    });
-    // --------------------------------------------------------------------------------------- swiper
+    $item_link = $('.item_link');
     $slick_slider = $('.swiper');
-    settings_slider = {
+    $toggle_menu_button = $('#toggle');
+    $settings_slider = {
         centerMode: true,
         dots: true,
         variableWidth: true,
@@ -17,9 +10,19 @@ $(document).ready(function() {
         centerPadding: '70px',
         slidesToShow: 1,
         initialSlide: 1,
-    }
-
-    slick_on_mobile($slick_slider, settings_slider);
+    };
+    //--------------------------------------------------------------------- hide menu after cklick
+    $item_link.click(function() {
+        $toggle_menu_button.prop("checked", false)
+    });
+    //--------------------------------------------------------------------- smooth scrolling
+    $item_link.click(function() {
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({ scrollTop: top }, 500);
+    });
+    // --------------------------------------------------------------------------------------- swiper
+    slick_on_mobile($slick_slider, $settings_slider);
 })
 
 // ajax

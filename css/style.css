@@ -64,12 +64,8 @@ section {
   line-height: 29px;
   color: #fff; }
 
-.messengers_box {
-  text-align: end; }
-  .messengers_box img + img {
-    margin-left: 10px; }
-  .messengers_box img {
-    width: 34px; }
+.messengers_box img {
+  width: 34px; }
 
 ::-webkit-scrollbar {
   width: 12px; }
@@ -81,21 +77,37 @@ section {
     background-color: #ed2c58;
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
 
+@media (min-width: 576px) {
+  .messengers_box {
+    text-align: end; }
+    .messengers_box img + img {
+      margin-left: 10px; }
+    .messengers_box img {
+      width: 34px; } }
+
 @media (max-width: 991px) {
   .logo {
     font-size: 20.5348px;
     line-height: 103.4%; } }
 
-.section_intro {
-  padding-top: 33px;
-  height: 100vh;
-  padding: 50px 112px; }
-  .section_intro .vacancy_title {
+@media (max-width: 575px) {
+  .body {
+    font-size: 16px;
+    line-height: 25px; }
+    .body .btn_main {
+      text-align: center;
+      max-width: 346px;
+      width: 100%; }
+    .body .slick-dots li button:before {
+      font-size: 8px; }
+  .section_subtitle,
+  .section_title {
     font-weight: bold;
-    font-size: 90.8876px;
-    /* identical to box height, or 107px */
-    line-height: 117.4%;
-    color: #FFFFFF; }
+    font-size: 24px;
+    line-height: 29px; }
+  section {
+    padding-top: 70px;
+    padding-bottom: 70px; } }
 
 .index_page {
   background: url(../assets/intro.jpg) no-repeat 0 0;
@@ -113,86 +125,177 @@ section {
   background: url(../assets/vacancy_mass.jpg) no-repeat 0 20%;
   background-size: cover; }
 
-header .menu_list li + li {
-  margin-left: 44px; }
+@media (max-width: 575px) {
+  .index_page {
+    background-position: 58%; }
+  .admin_page {
+    background-position: 40%; }
+  .model_page {
+    background-position: 46%; }
+  .mass_page {
+    background-position: 42%; } }
 
-header .menu_list .menu_item {
-  font-size: 21px;
-  line-height: 26px;
-  transition: .3s; }
-  header .menu_list .menu_item:hover .item_link {
-    color: #F15B7D; }
-
-header .phone_number {
-  padding: 0;
-  text-align: end;
-  font-weight: 500;
-  font-size: 21px;
-  line-height: 26px; }
-  header .phone_number img {
-    margin-right: 10px; }
-
-.preview_box {
-  margin-top: 18vh; }
-  .preview_box .preview_subtitle {
-    font-weight: 500;
-    font-size: 31.1479px;
-    line-height: 103.4%;
-    text-align: center;
-    color: #fff;
-    letter-spacing: 0.1em;
-    margin-bottom: 7px; }
-  .preview_box .preview_title {
+.section_intro {
+  padding-top: 33px;
+  height: 100vh;
+  padding: 50px 112px; }
+  .section_intro .vacancy_title {
     font-weight: bold;
-    font-size: 60px;
-    line-height: 103.4%;
-    text-align: center;
-    color: #FFFFFF;
-    margin-bottom: 16px; }
-  .preview_box .preview_buttons {
-    text-align: center; }
-    .preview_box .preview_buttons a + a {
-      margin-left: 13px; }
-    .preview_box .preview_buttons a {
-      font-size: 18px;
-      line-height: 22px; }
-
-@media (min-width: 992px) and (max-width: 1199px) {
-  .section_intro {
-    height: 85vh; } }
-
-@media (max-width: 1199px) {
-  .section_intro {
-    background-position: 38% 0;
-    background-size: cover;
-    padding: 46px 0px 25px;
-    position: relative; }
-    .section_intro nav {
-      padding: 0; }
-    .section_intro header .menu_list .menu_item {
-      font-size: 16px;
-      line-height: 20px; }
-    .section_intro header .phone_number {
-      position: absolute;
-      bottom: 25px;
-      right: 25px;
-      font-size: 16px;
-      line-height: 20px; }
-      .section_intro header .phone_number img {
-        margin-right: 6px; }
-    .section_intro header .logo {
-      padding: 0;
-      font-size: 20.5348px;
-      line-height: 103.4%; }
-    .section_intro .preview_box {
-      position: absolute;
-      bottom: 96px; }
-    .section_intro .vacancy_title {
-      font-size: 60px; } }
-
-@media (max-width: 991px) {
-  .section_intro {
-    height: 79vh; } }
+    font-size: 90.8876px;
+    /* identical to box height, or 107px */
+    line-height: 117.4%;
+    color: #FFFFFF; }
+  .section_intro header .menu_list .menu_item {
+    font-size: 21px;
+    line-height: 26px;
+    transition: .3s; }
+    .section_intro header .menu_list .menu_item:hover .item_link {
+      color: #F15B7D; }
+  .section_intro header .phone_number {
+    padding: 0;
+    text-align: end;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 26px; }
+    .section_intro header .phone_number img {
+      margin-right: 10px; }
+  .section_intro .preview_box {
+    margin-top: 18vh; }
+    .section_intro .preview_box .preview_subtitle {
+      font-weight: 500;
+      font-size: 31.1479px;
+      line-height: 103.4%;
+      text-align: center;
+      color: #fff;
+      letter-spacing: 0.1em;
+      margin-bottom: 7px; }
+    .section_intro .preview_box .preview_title {
+      font-weight: bold;
+      font-size: 60px;
+      line-height: 103.4%;
+      text-align: center;
+      color: #FFFFFF;
+      margin-bottom: 16px; }
+    .section_intro .preview_box .preview_buttons {
+      text-align: center; }
+      .section_intro .preview_box .preview_buttons a + a {
+        margin-left: 13px; }
+      .section_intro .preview_box .preview_buttons a {
+        font-size: 18px;
+        line-height: 22px; }
+  @media (min-width: 576px) {
+    .section_intro header .menu_list li + li {
+      margin-left: 44px; }
+    .section_intro header #toggle,
+    .section_intro header .toggle_button {
+      display: none; } }
+  @media (min-width: 576px) and (max-width: 1199px) {
+    .section_intro {
+      background-position: 38% 0;
+      background-size: cover; }
+      .section_intro header .logo {
+        padding: 0; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .section_intro {
+      height: 85vh; } }
+  @media (max-width: 1199px) {
+    .section_intro {
+      padding: 46px 0px 25px;
+      position: relative; }
+      .section_intro nav {
+        padding: 0; }
+      .section_intro header .menu_list .menu_item {
+        font-size: 16px;
+        line-height: 20px; }
+      .section_intro header .phone_number {
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+        font-size: 16px;
+        line-height: 20px; }
+        .section_intro header .phone_number img {
+          margin-right: 6px; }
+      .section_intro header .logo {
+        font-size: 20.5348px;
+        line-height: 103.4%; }
+      .section_intro .preview_box {
+        position: absolute;
+        bottom: 96px; }
+      .section_intro .vacancy_title {
+        font-size: 60px; } }
+  @media (max-width: 991px) {
+    .section_intro {
+      height: 79vh; } }
+  @media (max-width: 575px) {
+    .section_intro {
+      height: 100vh; }
+      .section_intro header .logo {
+        padding-left: 20px; }
+      .section_intro #toggle {
+        display: block;
+        position: absolute;
+        right: 0px;
+        visibility: hidden; }
+      .section_intro #toggle:checked ~ #menu {
+        right: 20px;
+        top: 80px;
+        padding: 43px 63px;
+        opacity: 1; }
+      .section_intro #toggle:checked ~ .toggle_button .item_top {
+        width: 45%; }
+      .section_intro #toggle:checked ~ .toggle_button .item_bot {
+        width: 100%; }
+      .section_intro #menu {
+        position: fixed;
+        top: -300px;
+        right: -330px;
+        opacity: 0;
+        background-color: #fff;
+        border-radius: 22px 0px 22px 22px;
+        z-index: 150;
+        transition: .3s ease-out; }
+        .section_intro #menu li + li {
+          margin-top: 32px; }
+        .section_intro #menu .item_link {
+          color: #F15B7D;
+          font-weight: 600;
+          font-size: 25px;
+          line-height: 103.4%;
+          /* identical to box height, or 26px */ }
+      .section_intro .toggle_button {
+        position: absolute;
+        top: 0px;
+        right: 20px;
+        height: 20px;
+        width: 26px;
+        z-index: 101; }
+        .section_intro .toggle_button span {
+          display: block;
+          position: absolute;
+          background-color: #fff;
+          height: 3px;
+          right: 0;
+          border-radius: 1px;
+          transition: .3s; }
+        .section_intro .toggle_button .item_top {
+          width: 100%; }
+        .section_intro .toggle_button .item_mid {
+          width: 75%;
+          margin-top: 8px; }
+        .section_intro .toggle_button .item_bot {
+          width: 45%;
+          margin-top: 16px; }
+      .section_intro .preview_box .preview_subtitle {
+        font-size: 18.4723px;
+        line-height: 103.4%;
+        /* or 19px */
+        letter-spacing: 0.13em; }
+      .section_intro .preview_box .preview_title {
+        font-size: 36px;
+        line-height: 103.4%;
+        /* or 37px */ }
+      .section_intro .vacancy_title {
+        font-size: 24px; } }
 
 .section_contacts {
   padding: 75px 0;
@@ -240,6 +343,17 @@ header .phone_number {
   @media (max-width: 991px) {
     .section_contacts {
       min-height: 21vh; } }
+  @media (max-width: 575px) {
+    .section_contacts {
+      padding: 40px 0; }
+      .section_contacts .section_subtitle {
+        font-size: 22px;
+        line-height: 27px;
+        text-align: center;
+        margin-bottom: 16px; }
+      .section_contacts .messengers_box {
+        display: flex;
+        justify-content: space-around; } }
 
 .section_promo {
   background: url(../assets/promo.jpg) no-repeat 50% 100%;
@@ -263,7 +377,7 @@ header .phone_number {
     .section_promo {
       padding: 150px 0;
       min-height: 768px; } }
-  @media (max-width: 1199px) {
+  @media (min-width: 576px) and (max-width: 1199px) {
     .section_promo {
       background: url(../assets/promo.jpg) no-repeat 46% 100%;
       background-size: cover; }
@@ -272,6 +386,15 @@ header .phone_number {
   @media (max-width: 991px) {
     .section_promo {
       min-height: 680px; } }
+  @media (max-width: 575px) {
+    .section_promo {
+      background-position: 35% 100%; }
+      .section_promo .section_title {
+        margin-bottom: 65px; }
+      .section_promo .promo_text {
+        font-size: 16px;
+        line-height: 140.9%;
+        /* or 23px */ } }
 
 .section_advantages {
   padding-bottom: 13px;
@@ -284,6 +407,7 @@ header .phone_number {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     padding: 0 30px;
     margin-bottom: 87px; }
     .section_advantages .advantages_item__icon {
@@ -293,6 +417,7 @@ header .phone_number {
       width: 64px;
       height: 64px;
       border-radius: 50%;
+      background-color: #fff;
       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.21);
       margin-bottom: 47px; }
     .section_advantages .advantages_item__title {
@@ -390,12 +515,14 @@ header .phone_number {
   @media (max-width: 1199px) {
     .section_about .about_img_2 {
       width: 387px; } }
+  @media (max-width: 575px) {
+    .section_about {
+      padding-bottom: 260px; } }
 
 .section_vacancies .section_title {
   color: #F15B7D; }
 
 .section_vacancies .text_color {
-  display: inline-block;
   padding: 0 15px;
   background-color: #F15B7D;
   color: #fff; }
@@ -417,8 +544,7 @@ header .phone_number {
     transition: .3s;
     position: relative; }
     .section_vacancies .vacancies_item .vacancies_item__photo .btn_main {
-      text-align: center;
-      opacity: 0; }
+      text-align: center; }
     .section_vacancies .vacancies_item .vacancies_item__photo::after {
       content: "";
       position: absolute;
@@ -478,9 +604,19 @@ header .phone_number {
   .section_vacancy .list_box {
     flex: 0; } }
 
-@media (max-width: 991px) {
+@media (min-width: 576px) and (max-width: 991px) {
   .section_vacancy .list_box {
     margin-bottom: 50px; } }
+
+@media (max-width: 575px) {
+  .section_vacancy .list_box + .list_box {
+    margin-top: 44px; }
+  .section_vacancy .text_box {
+    border-bottom: 1px solid #B4B4B4;
+    padding-bottom: 42px;
+    margin-bottom: 34px; }
+    .section_vacancy .text_box__title {
+      margin-bottom: 20px; } }
 
 .section_anketa {
   background: url(../assets/anketa.jpg) no-repeat 50% 0;
@@ -508,8 +644,6 @@ header .phone_number {
     line-height: 20px;
     color: rgba(92, 3, 28, 0.9);
     margin-bottom: 1px; }
-  .section_anketa .input {
-    margin-bottom: 16px; }
   .section_anketa .input,
   .section_anketa .textarea {
     background: rgba(255, 255, 255, 0.9);
@@ -518,7 +652,8 @@ header .phone_number {
     border: none;
     padding: 9px 12px;
     resize: none;
-    outline: none; }
+    outline: none;
+    margin-bottom: 16px; }
   .section_anketa .response {
     display: none;
     flex-direction: column;
@@ -543,6 +678,10 @@ header .phone_number {
       color: #FFFFFF; }
   .section_anketa .show {
     display: flex; }
+  @media (max-width: 575px) {
+    .section_anketa .form_box {
+      padding-right: 14px;
+      padding-left: 14px; } }
 
 .section_footer {
   padding: 50px 0;
@@ -560,4 +699,14 @@ header .phone_number {
       .section_footer .messengers_box {
         position: absolute;
         top: 50px;
-        right: 33px; } }
+        right: 24px; } }
+  @media (max-width: 575px) {
+    .section_footer .line {
+      margin-bottom: 13px; }
+    .section_footer .menu_list {
+      height: 73px;
+      flex-wrap: wrap; }
+    .section_footer .messengers_box {
+      text-align: center; }
+      .section_footer .messengers_box img + img {
+        margin-top: 10px; } }

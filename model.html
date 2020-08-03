@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dreem work</title>
+    <title>dream work</title>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -18,16 +18,22 @@
         <div class="container">
             <header>
                 <div class="row">
-                    <div class="logo col-2">D.Work</div>
-                    <nav class="col-10 col-xl-8">
-                        <ul class="menu_list d-flex justify-content-end justify-content-xl-center">
-                            <li class="menu_item"><a href="index.html" class="item_link">Главная</a></li>
+                    <div class="logo col-6 col-sm-2">D.Work</div>
+                    <nav class="col-6 col-sm-10 col-xl-8">
+                        <input type="checkbox" name="" id="toggle">
+                        <label class="toggle_button" for="toggle">
+                            <span class="item_top"></span>
+                            <span class="item_mid"></span>
+                            <span class="item_bot"></span>
+                        </label>
+                        <ul id="menu" class="menu_list d-sm-flex justify-content-sm-end justify-content-xl-center">
+                            <li class="menu_item"><a href="index.html#intro" class="item_link">Главная</a></li>
                             <li class="menu_item"><a href="index.html#vacancies" class="item_link">Вакансии</a></li>
                             <li class="menu_item"><a href="index.html#contacts" class="item_link">Контакты</a></li>
                             <li class="menu_item"><a href="index.html#about" class="item_link">Про агенство</a></li>
                         </ul>
                     </nav>
-                    <div class="phone_number col-3 col-xl-2">
+                    <div class="phone_number d-none d-sm-block col-sm-3 col-xl-2">
                         <a href="tel:+380996661488">
                             <img src="assets/svg/phone.svg" alt="">
                             <span>099 666 14 88</span>
@@ -43,10 +49,10 @@
     <!-- ========================================================== / section_intro  -->
     <!-- ---------------------------------------------------------- section_vacancy  -->
     <section id="vacancy" class="section_vacancy ">
-        <div class="container p-0 p-lg-3">
+        <div class="container p-sm-0 p-lg-3">
             <div class="row">
-                <div class="d-flex flex-lg-column col-12 col-lg-6">
-                    <div class="list_box col-6">
+                <div class="d-flex order-2 order-sm-1 flex-column flex-sm-row flex-lg-column col-12 col-lg-6">
+                    <div class="list_box col-sm-6 col-lg-12">
                         <div class="list_box__title section_subtitle">Требования:</div>
                         <ul class="list_box__list">
                             <li>Навыки корректного общения</li>
@@ -55,7 +61,7 @@
                             <li>Выплаты ежедневно</li>
                         </ul>
                     </div>
-                    <div class="list_box col-6">
+                    <div class="list_box col-sm-6 col-lg-12">
                         <div class="list_box__title section_subtitle">Условия:</div>
                         <ul class="list_box__list">
                             <li>Отсутствие вредных привычек</li>
@@ -65,13 +71,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="order-1 order-sm-2 col-12 col-lg-6">
                     <div class="text_box">
-                        <div class="text_box__title section_title">Egestas scelerisque suscipit ut</div>
-                        <div class="text_box__description">Lacus viverra eget nibh vulputate risus a. Dolor volutpat id duis pellentesque at. Nibh a, eget cursus nulla. Tempor, fermentum, amet, et ante. Eget sed vitae pellentesque viverra. Etiam tristique lacus, sagittis id nam quisque
-                            pellentesque. Velit vulputate turpis consequat purus quis imperdiet pulvinar arcu.</div>
+                        <div class="text_box__title section_title">Вакансия для девушки, знающая себе цену</div>
+                        <div class="text_box__description">Встреча, развлечение, сопровождение гостей - основное, чем будет заниматься эскорт модель. Сопровождение клиентов на важных встречах и мероприятиях (VIP сопровождения), а также совместный отдых. Всё что необходимо – это деликатно
+                            общаться, презентабельно выглядеть и быть в отличном настроении.</div>
                         <div class="text_box__button">
-                            <a href="#" class="btn_main">Заполнить анкету</a>
+                            <a href="index.html#anketa" class="btn_main">Заполнить анкету</a>
                         </div>
                     </div>
                 </div>
@@ -85,19 +91,19 @@
     <footer id="footer" class="section_footer">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="logo col-2 text-center">D.Work</div>
+                <div class="logo col-sm-2 text-center">D.Work</div>
             </div>
             <hr class="line">
             <div class="row justify-content-center justify-content-xl-between">
-                <nav class="col-12 col-xl-8">
-                    <ul class="menu_list d-flex justify-content-between justify-content-lg-center justify-content-xl-start">
-                        <li class="menu_item"><a href="#intro" class="item_link">Главная</a></li>
-                        <li class="menu_item"><a href="#vacancies" class="item_link">Вакансии</a></li>
-                        <li class="menu_item"><a href="#contacts" class="item_link">Контакты</a></li>
-                        <li class="menu_item"><a href="#about" class="item_link">Про агенство</a></li>
+                <nav class="col-9 col-sm-12 col-xl-8">
+                    <ul class="menu_list d-flex flex-column flex-sm-row justify-content-between justify-content-lg-center justify-content-xl-start">
+                        <li class="menu_item"><a href="index.html#intro" class="item_link">Главная</a></li>
+                        <li class="menu_item"><a href="index.html#vacancies" class="item_link">Вакансии</a></li>
+                        <li class="menu_item"><a href="index.html#contacts" class="item_link">Контакты</a></li>
+                        <li class="menu_item"><a href="index.html#about" class="item_link">Про агенство</a></li>
                     </ul>
                 </nav>
-                <div class="messengers_box col-3 col-xl-2">
+                <div class="messengers_box col-2 col-sm-3 col-xl-2">
                     <img src="assets/svg/viber.svg" alt="">
                     <img src="assets/svg/whatsapp.svg" alt="">
                     <img src="assets/svg/telegram.svg" alt="">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dreem work</title>
+    <title>dream work</title>
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -23,16 +23,22 @@
         <div class="container">
             <header>
                 <div class="row">
-                    <div class="logo col-2">D.Work</div>
-                    <nav class="col-10 col-xl-8">
-                        <ul class="menu_list d-flex justify-content-end justify-content-xl-center">
-                            <li class="menu_item"><a href="index.html" class="item_link">Главная</a></li>
+                    <div class="logo col-6 col-sm-2">D.Work</div>
+                    <nav class="col-6 col-sm-10 col-xl-8">
+                        <input type="checkbox" name="" id="toggle">
+                        <label class="toggle_button" for="toggle">
+                            <span class="item_top"></span>
+                            <span class="item_mid"></span>
+                            <span class="item_bot"></span>
+                        </label>
+                        <ul id="menu" class="menu_list d-sm-flex justify-content-sm-end justify-content-xl-center">
+                            <li class="menu_item"><a href="#intro" class="item_link">Главная</a></li>
                             <li class="menu_item"><a href="#vacancies" class="item_link">Вакансии</a></li>
                             <li class="menu_item"><a href="#contacts" class="item_link">Контакты</a></li>
                             <li class="menu_item"><a href="#about" class="item_link">Про агенство</a></li>
                         </ul>
                     </nav>
-                    <div class="phone_number col-3 col-xl-2">
+                    <div class="phone_number d-none d-sm-block col-sm-3 col-xl-2">
                         <a href="tel:+380996661488">
                             <img src="assets/svg/phone.svg" alt="">
                             <span>099 666 14 88</span>
@@ -46,7 +52,7 @@
                     <div class="preview_title">Dream Work</div>
                     <div class="preview_buttons">
                         <a class="btn_main item_link" href="#anketa">Заполнить анкету</a>
-                        <a class="btn_secondary item_link" href="#vacancies">Вакансии</a>
+                        <a class="btn_secondary item_link d-none d-sm-inline" href="#vacancies">Вакансии</a>
                     </div>
                 </div>
             </div>
@@ -58,10 +64,10 @@
     <section id="contacts" class="section_contacts">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div class="section_subtitle p-0 col-9 col-xl-6">
+                <div class="section_subtitle p-sm-0 col-11 col-sm-9 col-xl-6">
                     Не жди, лучше задай вопрос нам в удобном для тебя мессенджере
                 </div>
-                <div class="messengers_box p-0 col-3 col-xl-2">
+                <div class="messengers_box p-sm-0 col-6 col-sm-3 col-xl-2">
                     <img src="assets/svg/viber.svg" alt="">
                     <img src="assets/svg/whatsapp.svg" alt="">
                     <img src="assets/svg/telegram.svg" alt="">
@@ -78,12 +84,12 @@
     <section id="promo" class="section_promo">
         <div class="container">
             <div class="row flex-column flex-xl-row justify-content-xl-center">
-                <div class="col-8 col-lg-7 col-xl-5 p-0 pr-2">
+                <div class="col-11 col-sm-8 col-lg-7 col-xl-5 p-sm-0 pr-2">
                     <div class="section_title">
                         С нами ты <span>сможешь зарабатывать</span> в разы больше
                     </div>
                 </div>
-                <div class="promo_text align-self-end col-8 col-lg-7 p-0 col-xl-5">
+                <div class="promo_text align-self-end col-11 col-sm-8 col-lg-7 p-sm-0 col-xl-5">
                     Наши девушки привыкли к роскоши. Они одеваются в лучших магазинах, ездят на дорогих авто, проводят досуг на светских тусовках.
                 </div>
             </div>
@@ -94,17 +100,17 @@
     <!-- ---------------------------------------------------------- section_advantages  -->
     <section id="advantages" class="section_advantages">
         <div class="container-lg">
-            <div class="section_title">Наши преимущества</div>
+            <div class="section_title d-none d-sm-block">Наши преимущества</div>
             <div class="swiper advantages_area row">
                 <div class="advantages_item col-4">
                     <div class="advantages_item__icon">
                         <img src="assets/svg/dollar.svg" alt="">
                     </div>
                     <div class="advantages_item__title section_subtitle">
-                        Lorem
+                        Заработная плата от 2000 - 5000$ в месяц
                     </div>
                     <div class="advantages_item__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a amet, velit molestie. Nunc vitae orci nascetur faucibus vestibulum non sodales id lectus.
+                        Высокий стабильный заработок, ежедневные выплаты полностью исключают вероятность обмана со стороны агентства во всех случаях.
                     </div>
                 </div>
                 <div id="sli" class="advantages_item col-4">
@@ -112,10 +118,10 @@
                         <img src="assets/svg/time.svg" alt="">
                     </div>
                     <div class="advantages_item__title section_subtitle">
-                        Lorem ipsum
+                        Индивидуальный, свободный график
                     </div>
                     <div class="advantages_item__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non faucibus eu, sem enim nisl at. Iaculis at volutpat id diam commodo.
+                        Каждая девушка, устроившаяся к нам на работу, вольна выбирать время так, чтобы это было удобно исключительно ей.
                     </div>
                 </div>
                 <div class="advantages_item col-4">
@@ -123,10 +129,10 @@
                         <img src="assets/svg/home.svg" alt="">
                     </div>
                     <div class="advantages_item__title section_subtitle">
-                        Lorem
+                        Предоставляем жилье
                     </div>
                     <div class="advantages_item__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maecenas leo venenatis adipiscing nisl nec porttitor.
+                        Если необходимо, предоставляются апартаменты для проживания. Вам не нужно искать квартиру - наше агентство позаботится об этом.
                     </div>
                 </div>
                 <div class="advantages_item col-4">
@@ -134,10 +140,10 @@
                         <img src="assets/svg/woman.svg" alt="">
                     </div>
                     <div class="advantages_item__title section_subtitle">
-                        Lorem
+                        Услуги фотографа, стилиста, визажиста
                     </div>
                     <div class="advantages_item__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a amet, velit molestie. Nunc vitae orci nascetur faucibus vestibulum non sodales id lectus.
+                        Наши специалисты помогут вам создать свой неповторимый образ и сформировать портфолио.
                     </div>
                 </div>
                 <div class="advantages_item col-4">
@@ -145,10 +151,11 @@
                         <img src="assets/svg/security.svg" alt="">
                     </div>
                     <div class="advantages_item__title section_subtitle">
-                        Lorem ipsum
+                        Конфиденциальность и безопасность
                     </div>
                     <div class="advantages_item__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maecenas leo venenatis adipiscing nisl nec porttitor.
+                        Мы дорожим своей репутацией, поэтому вся информацию остается конфиденциальной. Полная защищенность и безопасность.
+
                     </div>
                 </div>
                 <div class="advantages_item col-4">
@@ -156,10 +163,11 @@
                         <img src="assets/svg/people.svg" alt="">
                     </div>
                     <div class="advantages_item__title section_subtitle">
-                        Lorem
+                        Встречаем вас на месте
+
                     </div>
                     <div class="advantages_item__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maecenas leo venenatis adipiscing nisl nec porttitor.
+                        Встречаем в аэропорту, на вокзале и сопровождаем до места проживания в центре Киева.
                     </div>
                 </div>
             </div>
@@ -174,7 +182,7 @@
     <section id="about" class="section_about">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="text_box   col-8 col-xl-5">
+                <div class="text_box col-sm-8 col-xl-5">
                     <div class="section_title">Tortor arcu sed lacus</div>
                     <div class="text_box__description">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas quam egestas suscipit odio massa, suscipit nisl mauris. Enim eu purus tristique cursus.
@@ -201,9 +209,9 @@
                     НАШИ ВАКАНСИИ,
                 </div>
                 <div class="section_title">
-                    <div class="text_color">
+                    <span class="text_color">
                         ВАШИ ВОЗМОЖНОСТИ
-                    </div>
+                    </span>
                 </div>
             </div>
             <div class="swiper row justify-content-lg-between">
@@ -213,8 +221,8 @@
                         <a href="model.html" class="btn_main">Подробнее</a>
                     </div>
                     <div class="vacancies_item__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut senectus urna in etiam scelerisque. Donec consequat eleifend nulla risus, odio blandit vitae elit nisl.
-                    </div>
+                        <div class="mb-2 font-weight-bold">Доход от 3000$ в месяц.
+                        </div> Встреча, развлечение, сопровождение гостей - основное, чем будет заниматься эскорт модель. </div>
                 </div>
                 <div id="test" class="vacancies_item col-lg-4 col-xl-3">
                     <div class="vacancies_item__title section_subtitle">Администратор</div>
@@ -223,8 +231,8 @@
                         <a href="admin.html" class="btn_main">Подробнее</a>
                     </div>
                     <div class="vacancies_item__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tellus nec pellentesque blandit erat.
-                    </div>
+                        <div class="mb-2 font-weight-bold">Доход от 600$ в месяц
+                        </div> Основное, чем будет заниматься администратор - общаться и консультировать сотрудниц.</div>
                 </div>
                 <div class=" vacancies_item col-lg-4 col-xl-3">
                     <div class="vacancies_item__title section_subtitle">Массажистка</div>
@@ -232,8 +240,8 @@
                         <a href="mass.html" class="btn_main">Подробнее</a>
                     </div>
                     <div class="vacancies_item__description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut senectus urna in etiam scelerisque. Donec consequat eleifend nulla risus, odio blandit vitae elit nisl.
-                    </div>
+                        <div class="mb-2 font-weight-bold">Доход от 1000$ в месяц
+                        </div>Приглашаем на работу массажисток, которые умеют выполнять различные виды массажа </div>
                 </div>
             </div>
 
@@ -246,9 +254,9 @@
     <section id="anketa" class="section_anketa">
         <div class="container">
             <div class="d-flex flex-column align-items-center">
-                <div class="section_title col-9 col-xl-6 text-center after_send_hide">Остались вопросы ?</div>
-                <div class="anketa_subtitle col-9 col-xl-6 text-center after_send_hide">Напиши нам и мы с тобой свяжемся</div>
-                <form id="ajax_form" class="col-9 col-xl-6 after_send_hide">
+                <div class="section_title p-0 col-sm-9 col-xl-6 text-center after_send_hide">Остались вопросы ?</div>
+                <div class="anketa_subtitle p-0 col-sm-9 col-xl-6 text-center after_send_hide">Напиши нам и мы с тобой свяжемся</div>
+                <form id="ajax_form" class="p-0 col-sm-9 col-xl-6 after_send_hide">
                     <div class="form_box">
                         <div class="form_text">Имя</div>
                         <input class="input w-100" type="text" name="name">
@@ -258,10 +266,13 @@
                         <input class="input w-100" type="text" name="tel">
                         <div class="form_text">Сообщение</div>
                         <textarea id="" class="textarea w-100" cols="30" rows="5" name="txt"></textarea>
+                        <div class="form_button text-center">
+                            <button class="btn_main" type="submit" onclick="sendAjaxForm('ajax_form', 'php/send_form.php')">Отправить</button>
+                        </div>
                     </div>
-                    <div class="form_button text-center">
+                    <!-- <div class="form_button text-center">
                         <button class="btn_main" type="submit" onclick="sendAjaxForm('ajax_form', 'php/send_form.php')">Отправить</button>
-                    </div>
+                    </div> -->
                 </form>
                 <div class="response">
                     <img src="assets/check.png" alt="" srcset="">
@@ -276,19 +287,19 @@
     <footer id="footer" class="section_footer">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="logo col-2 text-center">D.Work</div>
+                <div class="logo col-sm-2 text-center">D.Work</div>
             </div>
             <hr class="line">
             <div class="row justify-content-center justify-content-xl-between">
-                <nav class="col-12 col-xl-8">
-                    <ul class="menu_list d-flex justify-content-between justify-content-lg-center justify-content-xl-start">
+                <nav class="col-9 col-sm-12 col-xl-8">
+                    <ul class="menu_list d-flex flex-column flex-sm-row justify-content-between justify-content-lg-center justify-content-xl-start">
                         <li class="menu_item"><a href="#intro" class="item_link">Главная</a></li>
                         <li class="menu_item"><a href="#vacancies" class="item_link">Вакансии</a></li>
                         <li class="menu_item"><a href="#contacts" class="item_link">Контакты</a></li>
                         <li class="menu_item"><a href="#about" class="item_link">Про агенство</a></li>
                     </ul>
                 </nav>
-                <div class="messengers_box col-3 col-xl-2">
+                <div class="messengers_box col-2 col-sm-3 col-xl-2">
                     <img src="assets/svg/viber.svg" alt="">
                     <img src="assets/svg/whatsapp.svg" alt="">
                     <img src="assets/svg/telegram.svg" alt="">
