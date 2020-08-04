@@ -1,19 +1,22 @@
 <?php
-  $token = "1265883939:AAHZ7hPCC68TDLKpzBaPD0x1G-6IVRGl9is"; 
-  $chat_id = "-423211419";
+$token = "1075686909:AAERuG4YvzxCjg3ChV_vI0LCNhCKDP5cDrI"; 
+$chat_id = "-424143553";
 
-  $to = "matvienkoigor956@gmail.com";
+  $to = "matvienkoigor956@gmail.com, manager@dreamwork.kiev.ua";
   $subject = "Заявка с сайта";
-  $headers = "From: SweetGirls@example.com";
+  $headers = "From: dreamwork@example.com";
 
+    
   $name = trim($_POST["name"]);
-  $phone = trim($_POST["phone"]);  
-  $email = trim($_POST["email"]);  
+  $phone = trim($_POST["email"]);  
+  $email = trim($_POST["tel"]);  
+  $message = trim($_POST["txt"]);  
 
   $result = array(
     'Имя: ' => $name,
     'Телефон: ' => $phone,
-    'Email: ' => $email
+    'Email: ' => $email,
+    'Сообщение: ' => $message
   ); 
 
   foreach($result as $key => $value) {

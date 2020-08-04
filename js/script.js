@@ -9,7 +9,7 @@ $(document).ready(function() {
         infinite: false,
         centerPadding: '70px',
         slidesToShow: 1,
-        initialSlide: 1,
+        initialSlide: 0,
     };
     //--------------------------------------------------------------------- hide menu after cklick
     $item_link.click(function() {

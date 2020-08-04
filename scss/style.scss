@@ -649,7 +649,6 @@ section {
         }
     }
     @media (max-width: $screen_xs_max) {
-        min-height: 100vh;
         padding-bottom: 260px;
     }
 }
@@ -910,6 +909,10 @@ section {
         .menu_list {
             height: 73px;
             flex-wrap: wrap;
+        }
+        .mail_contact img {
+            width: 16px;
+            margin-right: 5px;
         }
         .messengers_box {
             text-align: center;

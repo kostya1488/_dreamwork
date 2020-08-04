@@ -519,7 +519,6 @@ section {
       width: 387px; } }
   @media (max-width: 575px) {
     .section_about {
-      min-height: 100vh;
       padding-bottom: 260px; } }
 
 .section_vacancies .section_title {
@@ -722,6 +721,9 @@ section {
     .section_footer .menu_list {
       height: 73px;
       flex-wrap: wrap; }
+    .section_footer .mail_contact img {
+      width: 16px;
+      margin-right: 5px; }
     .section_footer .messengers_box {
       text-align: center; }
       .section_footer .messengers_box a + a {
