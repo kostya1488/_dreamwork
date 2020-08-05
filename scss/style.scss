@@ -343,14 +343,11 @@ section {
         }
         #toggle:checked~#menu {
             right: 20px;
-            top: 80px;
+            top: 120px;
             padding: 43px 63px;
             opacity: 1;
         }
         #toggle:checked~.toggle_button {
-            // span {
-            //     background-color: $brand_main_color;
-            // }
             .item_top {
                 width: 45%;
             }
@@ -380,7 +377,8 @@ section {
         }
         .toggle_button {
             position: absolute;
-            top: 0px;
+            top: 50%;
+            margin-top: -10px;
             right: 20px;
             height: 20px;
             width: 26px;
